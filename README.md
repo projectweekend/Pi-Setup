@@ -1,4 +1,1 @@
-Pi-Setup
-========
-
-A setup script for the Raspberry Pi
+A script for setting up a new Raspberry Pi.
