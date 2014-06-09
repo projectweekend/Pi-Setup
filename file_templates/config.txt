@@ -45,5 +45,5 @@ overscan_top=16
 overscan_bottom=16
 disable_overscan=0
 start_x=1
-gpu_mem={0}
+gpu_mem={gpu_mem}
 hdmi_safe=1

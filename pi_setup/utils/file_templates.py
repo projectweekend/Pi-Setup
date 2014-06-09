@@ -5,4 +5,4 @@ def build(template_name, data):
     file = TEMPLATES_FOLDER + "/" + template_name
     with open(file, 'r') as f:
         template = f.read()
-    return template.format(data)
+    return template.format(**data)

@@ -22,8 +22,11 @@ def main():
 
 
 def update_file(path, new_hostname):
+	data = {
+		'hostname': new_hostname
+	}
 	template_name = path.split('/')[-1]
-	new_file_data = file_templates.build(template_name, [new_hostname])
+	new_file_data = file_templates.build(template_name, data)
 	with open(path, 'w') as f:
 		f.write(new_file_data)
 

@@ -3,7 +3,7 @@ from utils import file_templates
 
 
 def main():
-	user_input = raw_input("Want to setup wifi?: Y/N")
+	user_input = raw_input("Want to setup wifi? (Y/N): ")
 	if user_input == 'Y':
 		ssid = ''
 		password = ''
@@ -14,8 +14,12 @@ def main():
 
 
 def update_file(path, ssid, password):
+	data = {
+		'ssid': ssid,
+		'password': password
+	}
 	template_name = path.split('/')[-1]
-	new_file_data = file_templates.build(template_name, [ssid, password])
+	new_file_data = file_templates.build(template_name, data)
 	with open(path, 'w') as f:
 		f.write(new_file_data)
 
