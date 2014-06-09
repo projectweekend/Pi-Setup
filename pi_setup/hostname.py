@@ -5,7 +5,7 @@ from utils.validation import is_valid_hostname
 
 
 def main():
-	user_input = raw_input("Want to change the hostname?: Y/N")
+	user_input = raw_input("Want to change the hostname? (Y/N): ")
 	if user_input == 'Y':
 		new_hostname = ''
 		while new_hostname == '':
