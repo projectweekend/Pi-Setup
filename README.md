@@ -26,11 +26,12 @@ sudo reboot
 ### Features
 -------------------------------------------------------------------------------
 
-This setup script will perform the following tasks:
+This setup script will help you perform the following tasks:
 
 * wifi setup
 * GPU memory split
 * change hostname
+* enable I2C for GPIO
 * apt-get update & upgrade
 * install `avahi-daemon`
 * install `python-dev`
