@@ -12,6 +12,8 @@ def main():
         subprocess.call(["apt-get", "-y", "install", "i2c-tools"])
         if os.path.isfile('/etc/modprobe.d/raspi-blacklist.conf'):
             update_file('/etc/modprobe.d/raspi-blacklist.conf')
+    else:
+        print("Skipping I2C...")
 
 
 def update_file(path):

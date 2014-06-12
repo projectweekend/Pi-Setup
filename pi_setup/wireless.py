@@ -11,6 +11,8 @@ def main():
 			ssid = raw_input("Wifi network name (ssid): ")
 			password = raw_input("Wifi password: ")
 		update_file('/etc/network/interfaces', ssid, password)
+	else:
+		print("Skipping wifi...")
 
 
 def update_file(path, ssid, password):
