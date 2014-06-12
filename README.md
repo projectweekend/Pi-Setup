@@ -31,6 +31,7 @@ This setup script will help you perform the following tasks:
 * wifi setup
 * GPU memory split
 * change hostname
+* change `pi` user password
 * enable I2C for GPIO
 * apt-get update & upgrade
 * install `avahi-daemon`
