@@ -33,6 +33,7 @@ This setup script will help you perform the following tasks:
 * change hostname
 * change `pi` user password
 * enable I2C for GPIO
+* enable GPIO for serial data
 * apt-get update & upgrade
 * install `avahi-daemon`
 * install `python-dev`
