@@ -3,11 +3,12 @@ from utils import file_templates
 
 
 def main():
-	user_input = raw_input("Setup GPIO serial for data? (Y/N): ")
-	if user_input == 'Y':
-		update_file('/etc/inittab')
-	else:
-		print("Skipping GPIO serial...")
+    user_input = raw_input("Setup GPIO serial for data? (Y/N): ")
+    if user_input == 'Y':
+        update_file('/etc/inittab')
+        update_file('/boot/cmdline.txt')
+    else:
+        print("Skipping GPIO serial...")
 
 
 def update_file(path):
