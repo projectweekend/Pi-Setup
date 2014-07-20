@@ -38,4 +38,5 @@ This setup script will help you perform the following tasks:
 * install `avahi-daemon`
 * install `python-dev`
 * install `python-pip`
+* install `ipython-notebook`
 * install `virtualenv`
