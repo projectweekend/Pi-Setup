@@ -34,6 +34,7 @@ This setup script will help you perform the following tasks:
 * change `pi` user password
 * enable I2C for GPIO
 * enable GPIO for serial data
+* install a VNC server
 * apt-get update & upgrade
 * install `avahi-daemon`
 * install `python-dev`
