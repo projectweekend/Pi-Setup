@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 sudo python pi_setup/system.py
 sudo python pi_setup/vnc.py
+sudo python pi_setup/ipython.py
 python pi_setup/password.py
 sudo python pi_setup/hostname.py
 sudo python pi_setup/wireless.py
