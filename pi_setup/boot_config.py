@@ -4,14 +4,18 @@ from utils.validation import is_valid_gpu_mem
 
 
 def main():
-	gpu_mem = 0
-	while gpu_mem == 0:
-		user_input = raw_input("Enter GPU memory in MB (16/32/64/128/256): ")
-		if is_valid_gpu_mem(user_input):
-			gpu_mem = user_input
-		else:
-			print("Acceptable memory values are: 16/32/64/128/256")
-	update_file('/boot/config.txt', gpu_mem)
+	user_input = raw_input("Want to change the GPU memory split? (Y/N): ")
+	if user_input == 'Y':
+		gpu_mem = 0
+		while gpu_mem == 0:
+			mem_split = raw_input("Enter GPU memory in MB (16/32/64/128/256): ")
+			if is_valid_gpu_mem(mem_split):
+				gpu_mem = mem_split
+			else:
+				print("Acceptable memory values are: 16/32/64/128/256")
+		update_file('/boot/config.txt', gpu_mem)
+	else:
+		print("Skipping GPU memory split...")
 
 
 def update_file(path, gpu_mem):
