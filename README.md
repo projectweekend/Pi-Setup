@@ -26,7 +26,9 @@ sudo reboot
 ### Features
 -------------------------------------------------------------------------------
 
-This setup script will help you perform the following tasks:
+This setup script will help you perform the following tasks. You will be prompted to confirm each optional item before it begins.
+
+#### Optional Items
 
 * wifi setup
 * GPU memory split
@@ -35,9 +37,13 @@ This setup script will help you perform the following tasks:
 * enable I2C for GPIO
 * enable GPIO for serial data
 * install a VNC server
+* install `ipython-notebook`
+
+#### Automatic Items
+
 * apt-get update & upgrade
 * install `avahi-daemon`
 * install `python-dev`
 * install `python-pip`
-* install `ipython-notebook`
 * install `virtualenv`
+* install `rpi-update`
