@@ -1,14 +1,17 @@
 #!/usr/bin/env python
 from utils import file_templates
+from utils.installation import OptionalInstall
 
 
 def main():
-    user_input = raw_input("Setup GPIO serial for data? (Y/N): ")
-    if user_input == 'Y':
+    prompt_txt = "Setup GPIO serial for data? (Y/N): "
+    skip_txt = "Skipping GPIO serial..."
+
+    def action():
         update_file('/etc/inittab')
         update_file('/boot/cmdline.txt')
-    else:
-        print("Skipping GPIO serial...")
+
+    OptionalInstall(prompt_txt, skip_txt, action).run()
 
 
 def update_file(path):
