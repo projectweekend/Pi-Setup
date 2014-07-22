@@ -1,13 +1,16 @@
 #!/usr/bin/env python
 import subprocess
+from utils.installation import OptionalInstall
 
 
 def main():
-    user_input = raw_input("Want to install ipython-notebook? (Y/N): ")
-    if user_input == 'Y':
+    prompt_txt = "Want to install ipython-notebook? (Y/N): "
+    skip_txt = "Skipping ipython-notebook..."
+
+    def action():
         subprocess.call(["apt-get", "-y", "install", "ipython-notebook"])
-    else:
-        print("Skipping ipython-notebook...")
+
+    OptionalInstall(prompt_txt, skip_txt, action).run()
 
 
 if __name__ == '__main__':
