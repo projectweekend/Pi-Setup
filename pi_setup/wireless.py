@@ -1,18 +1,22 @@
 #!/usr/bin/env python
 from utils import file_templates
+from utils.installation import OptionalInstall
 
 
 def main():
-	user_input = raw_input("Want to setup wifi? (Y/N): ")
-	if user_input == 'Y':
+	prompt_txt = "Want to setup wifi? (Y/N): "
+	skip_txt = "Skipping wifi..."
+
+	def action():
 		ssid = ''
 		password = ''
 		while ssid == '' and password == '':
 			ssid = raw_input("Wifi network name (ssid): ")
 			password = raw_input("Wifi password: ")
 		update_file('/etc/network/interfaces', ssid, password)
-	else:
-		print("Skipping wifi...")
+
+	OptionalInstall(prompt_txt, skip_txt, action).run()
+
 
 
 def update_file(path, ssid, password):
