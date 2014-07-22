@@ -2,11 +2,14 @@
 import subprocess
 from utils import file_templates
 from utils.validation import is_valid_hostname
+from utils.installation import OptionalInstall
 
 
 def main():
-	user_input = raw_input("Want to change the hostname? (Y/N): ")
-	if user_input == 'Y':
+	prompt_txt = "Want to change the hostname? (Y/N): "
+	skip_txt = "Skipping hostname..."
+
+	def action():
 		new_hostname = ''
 		while new_hostname == '':
 			user_input = raw_input("Enter a new hostname: ")
@@ -17,8 +20,8 @@ def main():
 		update_file('/etc/hosts', new_hostname)
 		update_file('/etc/hostname', new_hostname)
 		subprocess.call(['/etc/init.d/hostname.sh'])
-	else:
-		print("Skipping hostname...")
+
+	OptionalInstall(prompt_txt, skip_txt, action).run()
 
 
 def update_file(path, new_hostname):
