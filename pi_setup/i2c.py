@@ -2,18 +2,21 @@
 import os
 import subprocess
 from utils import file_templates
+from utils.installation import OptionalInstall
 
 
 def main():
-    user_input = raw_input("Want to enable the I2C pins? (Y/N): ")
-    if user_input == 'Y':
+    prompt_txt = "Want to enable the I2C pins? (Y/N): "
+    skip_txt = "Skipping I2C..."
+
+    def action():
         update_file('/etc/modules')
         subprocess.call(["apt-get", "-y", "install", "python-smbus"])
         subprocess.call(["apt-get", "-y", "install", "i2c-tools"])
         if os.path.isfile('/etc/modprobe.d/raspi-blacklist.conf'):
             update_file('/etc/modprobe.d/raspi-blacklist.conf')
-    else:
-        print("Skipping I2C...")
+
+    OptionalInstall(prompt_txt, skip_txt, action).run()
 
 
 def update_file(path):
