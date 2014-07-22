@@ -1,13 +1,16 @@
 #!/usr/bin/env python
 import subprocess
+from utils.installation import OptionalInstall
 
 
 def main():
-	user_input = raw_input("Want to set a new password? (Y/N): ")
-	if user_input == 'Y':
-		subprocess.call(["passwd"])
-	else:
-		print("Skipping password...")
+    prompt_txt = "Want to set a new password? (Y/N): "
+    skip_txt = "Skipping password..."
+
+    def action():
+        subprocess.call(["passwd"])
+
+    OptionalInstall(prompt_txt, skip_txt, action).run()
 
 
 if __name__ == '__main__':
