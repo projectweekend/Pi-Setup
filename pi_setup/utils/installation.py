@@ -1,6 +1,6 @@
 class OptionalInstall(object):
 
-    def init(self, prompt_text, skip_text, action):
+    def __init__(self, prompt_text, skip_text, action):
         self.prompt_text = prompt_text
         self.skip_text = skip_text
         self.action = action
