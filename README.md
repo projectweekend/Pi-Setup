@@ -37,13 +37,14 @@ This setup script will help you perform the following tasks. You will be prompte
 * enable I2C for GPIO
 * enable GPIO for serial data
 * install a VNC server
-* install `ipython-notebook`
+* install [ipython-notebook](http://ipython.org/notebook.html)
+* install [upstart](http://upstart.ubuntu.com/)
 
 #### Automatic Items
 
 * apt-get update & upgrade
-* install `avahi-daemon`
-* install `python-dev`
-* install `python-pip`
-* install `virtualenv`
-* install `rpi-update`
+* install [avahi-daemon](http://en.wikipedia.org/wiki/Avahi_(software))
+* install [python-dev](https://packages.debian.org/wheezy/python-dev)
+* install [python-pip](https://packages.debian.org/wheezy/python-pip)
+* install [virtualenv](http://virtualenv.readthedocs.org/en/latest/)
+* install [rpi-update](https://github.com/Hexxeh/rpi-update)
