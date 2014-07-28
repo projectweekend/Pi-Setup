@@ -25,6 +25,8 @@ def main():
 				OPTIONAL_SOFTWARE[user_input]()
 			except KeyError:
 				print("'{0}' is not a valid selection".format(user_input))
+			else:
+				print("'{0}' installation complete".format(user_input))
 		else:
 			print("Optional software complete...")
 
