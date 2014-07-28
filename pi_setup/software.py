@@ -13,20 +13,19 @@ def main():
 	skip_txt = "Skipping optional software..."
 
 	def action():
-		start_optional_software()
+		user_input = ""
+		while user_input != "done":
+
+			for i in OPTIONAL_SOFTWARE:
+				print(i)
+			print("When you are finished type: done")
+
+			user_input = raw_input("Item to install: ")
+			try:
+				OPTIONAL_SOFTWARE[user_input]()
+			except KeyError:
+				print("'{0}' is not a valid selection".format(user_input))
+		else:
+			print("Optional software complete...")
 
 	OptionalInstall(prompt_txt, skip_txt, action)
-
-
-def start_optional_software():
-	print_software_list()
-
-	user_input = ""
-	while user_input != "done":
-		pass
-
-
-def print_software_list():
-	for i in OPTIONAL_SOFTWARE:
-		print(i)
-	print("When you are finished type: done")
