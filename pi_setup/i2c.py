@@ -6,8 +6,8 @@ from utils.installation import OptionalInstall
 
 
 def main():
-    prompt_txt = "Want to enable the I2C pins? (Y/N): "
-    skip_txt = "Skipping I2C..."
+    prompt_txt = "Want to enable the I2C & SPI pins? (Y/N): "
+    skip_txt = "Skipping I2C & SPI..."
 
     def action():
         update_file('/etc/modules')

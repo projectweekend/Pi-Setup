@@ -34,9 +34,9 @@ This setup script will help you perform the following tasks. You will be prompte
 * GPU memory split
 * change hostname
 * change `pi` user password
-* enable I2C for GPIO
+* enable [I2C](http://en.wikipedia.org/wiki/I²C) & [SPI](http://en.wikipedia.org/wiki/Serial_Peripheral_Interface_Bus) pins
 * enable GPIO for serial data
-* install a VNC server
+* install a [VNC server](http://www.tightvnc.com)
 * install [ipython-notebook](http://ipython.org/notebook.html)
 * install [upstart](http://upstart.ubuntu.com/)
 
