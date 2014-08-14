@@ -19,7 +19,7 @@ def optional_install_upstart():
     skip_txt = "Skipping Upstart server..."
 
     def action():
-        subprocess.call(["apt-get", "-y", "install", "upstart"])
+        subprocess.call(["apt-get", "-y", "install", "upstart", "--force-yes"])
 
     OptionalInstall(prompt_txt, skip_txt, action).run()
 
