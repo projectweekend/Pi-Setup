@@ -9,3 +9,4 @@ sudo python pi_setup/boot_config.py
 sudo python pi_setup/i2c.py
 sudo python pi_setup/serial.py
 sudo python pi_setup/firmware.py
+sudo python pi_setup/bluez.py
