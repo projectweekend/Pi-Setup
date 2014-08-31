@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+import os
 import subprocess
 from utils.installation import OptionalInstall
 
@@ -15,21 +16,21 @@ def main():
     	subprocess.call(["apt-get", "-y", "install", "libical-dev"])
     	subprocess.call(["apt-get", "-y", "install", "libreadline-dev"])
 
-    	subprocess.call(["cd", "/home/pi"])
+        os.chdir("/home/pi")
     	subprocess.call(["mkdir", "bluez"])
     	subprocess.call(["cd", "bluez"])
     	subprocess.call(["wget", "https://www.kernel.org/pub/linux/bluetooth/bluez-5.22.tar.xz"])
     	subprocess.call(["unxz", "bluez-5.22.tar.xz"])
     	subprocess.call(["tar", "xvf", "bluez-5.22.tar"])
-    	subprocess.call(["cd", "bluez-5.22"])
+        os.chdir("bluez-5.22")
     	subprocess.call(["./configure", "--disable-systemd"])
     	subprocess.call(["make"])
     	subprocess.call(["make", "install"])
-    	subprocess.call(["cd", "/home/pi"])
+    	os.chdir("/home/pi")
     	subprocess.call(["rm", "-r", "bluez"])
 
     	subprocess.call(["git", "clone", "https://github.com/IanHarvey/bluepy.git"])
-    	subprocess.call(["cd", "bluepy/bluepy"])
+        os.chdir("bluepy/bluepy")
     	subprocess.call(["make"])
 
     OptionalInstall(prompt_txt, skip_txt, action).run()
