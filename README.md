@@ -39,6 +39,7 @@ This setup script will help you perform the following tasks. You will be prompte
 * install a [VNC server](http://www.tightvnc.com)
 * install [ipython-notebook](http://ipython.org/notebook.html)
 * install [upstart](http://upstart.ubuntu.com/)
+* install [BlueZ](http://en.wikipedia.org/wiki/Bluetooth_stack#BlueZ) Bluetooth stack & [BluePy](https://github.com/IanHarvey/bluepy) a Python interface for Bluetooth Low Energy.
 
 #### Automatic Items
 
