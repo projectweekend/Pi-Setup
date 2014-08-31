@@ -18,7 +18,7 @@ def main():
 
         os.chdir("/home/pi")
     	subprocess.call(["mkdir", "bluez"])
-    	subprocess.call(["cd", "bluez"])
+        os.chdir("bluez")
     	subprocess.call(["wget", "https://www.kernel.org/pub/linux/bluetooth/bluez-5.22.tar.xz"])
     	subprocess.call(["unxz", "bluez-5.22.tar.xz"])
     	subprocess.call(["tar", "xvf", "bluez-5.22.tar"])
