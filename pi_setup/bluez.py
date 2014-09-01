@@ -37,9 +37,9 @@ def main():
         os.chdir("bluepy/bluepy")
     	subprocess.call(["make"])
 
-        subprocess.call(["cp", "bluepy-helper", "/usr/local/lib/python2.7/site-packages/"])
-        subprocess.call(["cp", "btle.py", "/usr/local/lib/python2.7/site-packages/"])
-        subprocess.call(["cp", "sensortag.py", "/usr/local/lib/python2.7/site-packages/"])
+        subprocess.call(["cp", "bluepy-helper", "/usr/local/lib/python2.7/dist-packages/"])
+        subprocess.call(["cp", "btle.py", "/usr/local/lib/python2.7/dist-packages/"])
+        subprocess.call(["cp", "sensortag.py", "/usr/local/lib/python2.7/dist-packages/"])
 
         # Clean up BluePy build directory
         os.chdir("/home/pi")
