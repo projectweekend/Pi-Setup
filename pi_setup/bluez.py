@@ -16,6 +16,7 @@ def main():
     	subprocess.call(["apt-get", "-y", "install", "libical-dev"])
     	subprocess.call(["apt-get", "-y", "install", "libreadline-dev"])
 
+        # Install BlueZ
         os.chdir("/home/pi")
     	subprocess.call(["mkdir", "bluez"])
         os.chdir("bluez")
@@ -26,12 +27,23 @@ def main():
     	subprocess.call(["./configure", "--disable-systemd"])
     	subprocess.call(["make"])
     	subprocess.call(["make", "install"])
+
+        # Clean up BlueZ build directory
     	os.chdir("/home/pi")
     	subprocess.call(["rm", "-r", "bluez"])
 
+        # Install BluePy
     	subprocess.call(["git", "clone", "https://github.com/IanHarvey/bluepy.git"])
         os.chdir("bluepy/bluepy")
     	subprocess.call(["make"])
+
+        subprocess.call(["cp", "bluepy-helper", "/usr/local/lib/python2.7/site-packages/"])
+        subprocess.call(["cp", "btle.py", "/usr/local/lib/python2.7/site-packages/"])
+        subprocess.call(["cp", "sensortag.py", "/usr/local/lib/python2.7/site-packages/"])
+
+        # Clean up BluePy build directory
+        os.chdir("/home/pi")
+        subprocess.call(["rm", "-r", "bluepy"])
 
     OptionalInstall(prompt_txt, skip_txt, action).run()
 
