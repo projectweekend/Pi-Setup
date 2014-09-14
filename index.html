@@ -29,7 +29,7 @@
     <div class="container">
       <section id="main_content">
         <hr><h3>
-<a name="setup" class="anchor" href="#setup"><span class="octicon octicon-link"></span></a>Setup</h3>
+<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h3>
 
 <hr><h4>
 <a name="step-1-clone-this-repository" class="anchor" href="#step-1-clone-this-repository"><span class="octicon octicon-link"></span></a>Step 1: Clone this repository</h4>
@@ -54,26 +54,9 @@
 <hr><h3>
 <a name="features" class="anchor" href="#features"><span class="octicon octicon-link"></span></a>Features</h3>
 
-<hr><p>This setup script will help you perform the following tasks. You will be prompted to confirm each optional item before it begins.</p>
+<hr><p>This setup script will help you perform the following tasks. Launching the script with no parameters (<code>./pi_setup</code>) will run through all of its steps prompting you to confirm each <strong>optional</strong> item before it begins. This is handy when setting up a brand new Raspberry Pi, however each <strong>optional</strong> item can be executed individually by passing the appropriate <strong>parameter</strong> to the script. Example: <code>./pi_setup vnc</code></p>
 
 <h4>
-<a name="optional-items" class="anchor" href="#optional-items"><span class="octicon octicon-link"></span></a>Optional Items</h4>
-
-<ul>
-<li>wifi setup</li>
-<li>GPU memory split</li>
-<li>change hostname</li>
-<li>change <code>pi</code> user password</li>
-<li>enable <a href="http://en.wikipedia.org/wiki/I%C2%B2C">I2C</a> &amp; <a href="http://en.wikipedia.org/wiki/Serial_Peripheral_Interface_Bus">SPI</a> pins</li>
-<li>enable GPIO for serial data</li>
-<li>install a <a href="http://www.tightvnc.com">VNC server</a>
-</li>
-<li>install <a href="http://ipython.org/notebook.html">ipython-notebook</a>
-</li>
-<li>install <a href="http://upstart.ubuntu.com/">upstart</a>
-</li>
-<li>install <a href="http://en.wikipedia.org/wiki/Bluetooth_stack#BlueZ">BlueZ</a> Bluetooth stack &amp; <a href="https://github.com/IanHarvey/bluepy">BluePy</a> a Python interface for Bluetooth Low Energy.</li>
-</ul><h4>
 <a name="automatic-items" class="anchor" href="#automatic-items"><span class="octicon octicon-link"></span></a>Automatic Items</h4>
 
 <ul>
@@ -88,6 +71,20 @@
 </li>
 <li>install <a href="https://github.com/Hexxeh/rpi-update">rpi-update</a>
 </li>
+</ul><h4>
+<a name="optional-items" class="anchor" href="#optional-items"><span class="octicon octicon-link"></span></a>Optional Items</h4>
+
+<ul>
+<li>wifi setup (<strong>parameter</strong>: <code>wireless</code>)</li>
+<li>GPU memory split (<strong>parameter</strong>: <code>boot</code>)</li>
+<li>change hostname (<strong>parameter</strong>: <code>hostname</code>)</li>
+<li>change <code>pi</code> user password (<strong>parameter</strong>: <code>password</code>)</li>
+<li>enable <a href="http://en.wikipedia.org/wiki/I%C2%B2C">I2C</a> &amp; <a href="http://en.wikipedia.org/wiki/Serial_Peripheral_Interface_Bus">SPI</a> pins (<strong>parameter</strong>: <code>i2c</code>)</li>
+<li>enable GPIO for serial data (<strong>parameter</strong>: <code>serial</code>)</li>
+<li>install a <a href="http://www.tightvnc.com">VNC server</a> (<strong>parameter</strong>: <code>vnc</code>)</li>
+<li>install <a href="http://ipython.org/notebook.html">ipython-notebook</a> (<strong>parameter</strong>: <code>ipython</code>)</li>
+<li>install <a href="http://upstart.ubuntu.com/">upstart</a> (<strong>parameter</strong>: <code>upstart</code>)</li>
+<li>install <a href="http://en.wikipedia.org/wiki/Bluetooth_stack#BlueZ">BlueZ</a> Bluetooth stack &amp; <a href="https://github.com/IanHarvey/bluepy">BluePy</a> a Python interface for Bluetooth Low Energy. (<strong>parameter</strong>: <code>bluez</code>)</li>
 </ul>
       </section>
     </div>
