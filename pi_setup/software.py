@@ -1,10 +1,13 @@
 #!/usr/bin/env python
 from utils.installation import OptionalInstall
-from utils.software import install_nodejs
+from utils.software import *
 
 
 OPTIONAL_SOFTWARE = {
-	"nodejs": install_nodejs
+	"nodejs": install_nodejs,
+	"ipython": install_ipython,
+	"upstart": install_upstart,
+	"bluez": install_bluez
 }
 
 

@@ -5,14 +5,13 @@ sudo python pi_setup/system.py
 if [ -z "$1" ];
     then
         sudo python pi_setup/vnc.py
-        sudo python pi_setup/ipython.py
         python pi_setup/password.py
         sudo python pi_setup/hostname.py
         sudo python pi_setup/wireless.py
         sudo python pi_setup/boot_config.py
         sudo python pi_setup/i2c.py
         sudo python pi_setup/serial.py
-        sudo python pi_setup/bluez.py
+        sudo python pi_setup/software.py
         sudo python pi_setup/firmware.py
 
 elif [ -n "$1" ] && [ $1 == 'software' ];
@@ -22,10 +21,6 @@ elif [ -n "$1" ] && [ $1 == 'software' ];
 elif [ -n "$1" ] && [ $1 == 'vnc' ];
     then
     sudo python pi_setup/vnc.py
-
-elif [ -n "$1" ] && [ $1 == 'ipython' ];
-    then
-    sudo python pi_setup/ipython.py
 
 elif [ -n "$1" ] && [ $1 == 'password' ];
     then
@@ -54,8 +49,4 @@ elif [ -n "$1" ] && [ $1 == 'serial' ];
 elif [ -n "$1" ] && [ $1 == 'firmware' ];
     then
     sudo python pi_setup/firmware.py
-
-elif [ -n "$1" ] && [ $1 == 'bluez' ];
-    then
-    sudo python pi_setup/bluez.py
 fi
