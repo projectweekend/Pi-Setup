@@ -34,3 +34,7 @@ def main():
 			print("Optional software complete...")
 
 	OptionalInstall(prompt_txt, skip_txt, action)
+
+
+if __name__ == '__main__':
+	main()
