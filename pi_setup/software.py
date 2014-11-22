@@ -33,7 +33,7 @@ def main():
 		else:
 			print("Optional software complete...")
 
-	OptionalInstall(prompt_txt, skip_txt, action)
+	OptionalInstall(prompt_txt, skip_txt, action).run()
 
 
 if __name__ == '__main__':
