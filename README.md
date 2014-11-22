@@ -47,6 +47,4 @@ This setup script will help you perform the following tasks. Launching the scrip
 * enable [I2C](http://en.wikipedia.org/wiki/I²C) & [SPI](http://en.wikipedia.org/wiki/Serial_Peripheral_Interface_Bus) pins (**parameter**: `i2c`)
 * enable GPIO for serial data (**parameter**: `serial`)
 * install a [VNC server](http://www.tightvnc.com) (**parameter**: `vnc`)
-* install [ipython-notebook](http://ipython.org/notebook.html) (**parameter**: `ipython`)
-* install [upstart](http://upstart.ubuntu.com/) (**parameter**: `upstart`)
-* install [BlueZ](http://en.wikipedia.org/wiki/Bluetooth_stack#BlueZ) Bluetooth stack & [BluePy](https://github.com/IanHarvey/bluepy) a Python interface for Bluetooth Low Energy. (**parameter**: `bluez`)
+* browse and install various optional software (**parameter**: `software`)
