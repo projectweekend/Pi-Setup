@@ -15,6 +15,10 @@ if [ -z "$1" ];
         sudo python pi_setup/bluez.py
         sudo python pi_setup/firmware.py
 
+elif [ -n "$1" ] && [ $1 == 'software' ];
+    then
+    sudo python pi_setup/software.py
+
 elif [ -n "$1" ] && [ $1 == 'vnc' ];
     then
     sudo python pi_setup/vnc.py
