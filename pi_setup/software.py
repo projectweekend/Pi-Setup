@@ -24,12 +24,13 @@ def main():
 			print("When you are finished type: done")
 
 			user_input = raw_input("Item to install: ")
-			try:
-				OPTIONAL_SOFTWARE[user_input]()
-			except KeyError:
-				print("'{0}' is not a valid selection".format(user_input))
-			else:
-				print("'{0}' installation complete".format(user_input))
+			if user_input != "done":
+				try:
+					OPTIONAL_SOFTWARE[user_input]()
+				except KeyError:
+					print("'{0}' is not a valid selection".format(user_input))
+				else:
+					print("'{0}' installation complete".format(user_input))
 		else:
 			print("Optional software complete...")
 
