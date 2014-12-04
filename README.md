@@ -47,13 +47,15 @@ This setup script will help you perform the following tasks. Launching the scrip
 * enable [I2C](http://en.wikipedia.org/wiki/I²C) & [SPI](http://en.wikipedia.org/wiki/Serial_Peripheral_Interface_Bus) pins (**parameter**: `i2c`)
 * enable GPIO for serial data (**parameter**: `serial`)
 * install a [VNC server](http://www.tightvnc.com) (**parameter**: `vnc`)
-* browse and install optional software (**parameter**: `software`)
 
 #### Optional Software
 
-The following optional installs are available using the `software` parameter referenced in the section above:
+The following optional installs are available using the `software` parameter:
+```
+./pi_setup.sh software
+```
 
-* [Node.js](http://nodejs.org/)
+* [Bluez](http://www.bluez.org/) (This takes a while)
 * [iPython Notebook](http://ipython.org/notebook.html)
+* [Node.js](http://nodejs.org/)
 * [Upstart](http://upstart.ubuntu.com/)
-* [Bluez](http://www.bluez.org/) (This install takes a while)
