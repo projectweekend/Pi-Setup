@@ -3,10 +3,8 @@ import subprocess
 
 
 def install_nodejs():
-    subprocess.call(["add-apt-repository", "ppa:chris-lea/node.js"])
-    subprocess.call(["apt-get", "update"])
-    subprocess.call(["apt-get", "-y", "install", "nodejs"])
-    subprocess.call(["apt-get", "-y", "install", "npm"])
+	subprocess.call('curl -sL https://deb.nodesource.com/setup | bash -', shell=True)
+	subprocess.call('apt-get -y install nodejs', shell=True)
 
 
 def install_ipython():
@@ -14,7 +12,7 @@ def install_ipython():
 
 
 def install_upstart():
-	subprocess.call(["apt-get", "-y", "install", "upstart", "--force-yes"])
+	subprocess.call("echo Yes, do as I say! | sudo apt-get -y --force-yes install upstart", shell=True)
 
 
 def install_bluez():
