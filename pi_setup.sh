@@ -11,7 +11,6 @@ if [ -z "$1" ];
         sudo python pi_setup/boot_config.py
         sudo python pi_setup/i2c.py
         sudo python pi_setup/serial.py
-        sudo python pi_setup/software.py
         sudo python pi_setup/firmware.py
 
 elif [ -n "$1" ] && [ $1 == 'software' ];
