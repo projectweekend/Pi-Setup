@@ -3,8 +3,9 @@ import subprocess
 
 
 def install_nodejs():
-	subprocess.call('curl -sL https://deb.nodesource.com/setup | bash -', shell=True)
-	subprocess.call('apt-get -y install nodejs', shell=True)
+	subprocess.call(['wget', 'http://node-arm.herokuapp.com/node_latest_armhf.deb'])
+	subprocess.call(['dpkg', '-i', 'node_latest_armhf.deb'])
+	subprocess.call(['rm', 'node_latest_armhf.deb'])
 
 
 def install_ipython():
